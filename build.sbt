@@ -17,6 +17,7 @@ lazy val root =
   (project in file("."))
     .settings(
       Seq(
+        name:= "queue-client",
         publishArtifact := false
       ) ++ sharedSettings ++ githubPackagesConfig: _*
     )
