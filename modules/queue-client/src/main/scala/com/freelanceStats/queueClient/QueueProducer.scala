@@ -1,4 +1,4 @@
-package com.freelancerStats.queueClient
+package com.freelanceStats.queueClient
 
 import akka.NotUsed
 import akka.stream.scaladsl.Source

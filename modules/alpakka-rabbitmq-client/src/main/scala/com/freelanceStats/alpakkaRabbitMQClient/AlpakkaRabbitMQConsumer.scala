@@ -1,11 +1,11 @@
-package com.freelancerStats.alpakkaRabbitMQClient
+package com.freelanceStats.alpakkaRabbitMQClient
 
 import akka.Done
 import akka.stream.alpakka.amqp.AmqpWriteSettings
 import akka.stream.alpakka.amqp.scaladsl.AmqpSink
 import akka.stream.scaladsl.{Flow, Keep, Sink}
-import com.freelancerStats.alpakkaRabbitMQClient.elementConverter.ElementToByteStringConverter
-import com.freelancerStats.queueClient.QueueConsumer
+import com.freelanceStats.alpakkaRabbitMQClient.elementConverter.ElementToByteStringConverter
+import com.freelanceStats.queueClient.QueueConsumer
 
 import scala.concurrent.Future
 

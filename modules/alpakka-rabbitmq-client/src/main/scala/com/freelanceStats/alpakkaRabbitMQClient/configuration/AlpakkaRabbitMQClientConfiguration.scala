@@ -1,4 +1,4 @@
-package com.freelancerStats.alpakkaRabbitMQClient.configuration
+package com.freelanceStats.alpakkaRabbitMQClient.configuration
 
 import scala.concurrent.duration.{DurationInt, FiniteDuration}
 

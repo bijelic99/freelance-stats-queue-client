@@ -1,9 +1,9 @@
-package com.freelancerStats.alpakkaRabbitMQClient
+package com.freelanceStats.alpakkaRabbitMQClient
 
 import akka.stream.Materializer
 import akka.stream.alpakka.amqp.QueueDeclaration
-import com.freelancerStats.alpakkaRabbitMQClient.configuration.AlpakkaRabbitMQClientConfiguration
-import com.freelancerStats.alpakkaRabbitMQClient.connectionProviderFactory.ConnectionProviderFactory
+import com.freelanceStats.alpakkaRabbitMQClient.configuration.AlpakkaRabbitMQClientConfiguration
+import com.freelanceStats.alpakkaRabbitMQClient.connectionProviderFactory.ConnectionProviderFactory
 
 trait AlpakkaRabbitMQClient {
   implicit val materializer: Materializer

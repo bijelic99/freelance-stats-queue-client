@@ -1,4 +1,4 @@
-package com.freelancerStats.alpakkaRabbitMQClient.connectionProviderFactory
+package com.freelanceStats.alpakkaRabbitMQClient.connectionProviderFactory
 
 import akka.stream.alpakka.amqp.AmqpConnectionProvider
 

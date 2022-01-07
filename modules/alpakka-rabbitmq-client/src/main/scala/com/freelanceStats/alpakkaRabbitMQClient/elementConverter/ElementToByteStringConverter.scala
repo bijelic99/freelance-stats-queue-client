@@ -1,4 +1,4 @@
-package com.freelancerStats.alpakkaRabbitMQClient.elementConverter
+package com.freelanceStats.alpakkaRabbitMQClient.elementConverter
 
 import akka.util.ByteString
 

@@ -1,11 +1,11 @@
-package com.freelancerStats.alpakkaRabbitMQClient
+package com.freelanceStats.alpakkaRabbitMQClient
 
 import akka.NotUsed
 import akka.stream.alpakka.amqp.NamedQueueSourceSettings
 import akka.stream.alpakka.amqp.scaladsl.AmqpSource
 import akka.stream.scaladsl.Source
-import com.freelancerStats.alpakkaRabbitMQClient.elementConverter.ByteStringToElementConverter
-import com.freelancerStats.queueClient.QueueProducer
+import com.freelanceStats.alpakkaRabbitMQClient.elementConverter.ByteStringToElementConverter
+import com.freelanceStats.queueClient.QueueProducer
 
 trait AlpakkaRabbitMQPProducer[Element]
     extends AlpakkaRabbitMQClient
