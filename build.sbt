@@ -39,7 +39,8 @@ lazy val alpakkaRabbitMQClient =
       Seq(
         name := "alpakka-rabbitmq-client",
         libraryDependencies ++= Seq(
-          "com.typesafe.akka" %% "akka-stream" % AkkaVersion
+          "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
+          "com.lightbend.akka" %% "akka-stream-alpakka-amqp" % "3.0.4",
         )
       ) ++ sharedSettings ++ githubPackagesConfig: _*
     ).dependsOn(queueClient)
