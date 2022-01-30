@@ -15,8 +15,8 @@ trait AlpakkaRabbitMQConsumer[Element]
 
   def elementToByteStringConverter: ElementToByteStringConverter[Element]
 
-  protected val settings: AmqpWriteSettings =
-    AmqpWriteSettings(connectionProviderFactory.get)
+  protected val consumerSettings: AmqpWriteSettings =
+    AmqpWriteSettings(amqpConnectionProvider)
       .withRoutingKey(configuration.queueName)
       .withDeclaration(queueDeclaration)
       .withBufferSize(configuration.writeBufferSize)
@@ -25,6 +25,6 @@ trait AlpakkaRabbitMQConsumer[Element]
   override def sink: Sink[Element, Future[Done]] =
     Flow[Element]
       .map(elementToByteStringConverter.toByteString)
-      .toMat(AmqpSink.simple(settings))(Keep.right)
+      .toMat(AmqpSink.simple(consumerSettings))(Keep.right)
 
 }

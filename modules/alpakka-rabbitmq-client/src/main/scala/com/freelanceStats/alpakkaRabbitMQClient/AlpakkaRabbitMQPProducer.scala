@@ -12,9 +12,9 @@ trait AlpakkaRabbitMQPProducer[Element]
     with QueueProducer[Element] {
   def byteStringToElementConverter: ByteStringToElementConverter[Element]
 
-  protected val settings: NamedQueueSourceSettings =
+  protected val producerSettings: NamedQueueSourceSettings =
     NamedQueueSourceSettings(
-      connectionProviderFactory.get,
+      amqpConnectionProvider,
       configuration.queueName
     )
       .withDeclaration(queueDeclaration)
@@ -23,7 +23,7 @@ trait AlpakkaRabbitMQPProducer[Element]
   override def source: Source[Element, NotUsed] =
     AmqpSource
       .atMostOnceSource(
-        settings,
+        producerSettings,
         configuration.readBufferSize
       )
       .map(_.bytes)
